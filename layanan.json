@@ -1,0 +1,37 @@
+[
+    {
+        "id": "L001",
+        "nama": "Cuci Kering",
+        "kategori": "Kiloan",
+        "harga": 6000,
+        "estimasi": "2 hari"
+    },
+    {
+        "id": "L002",
+        "nama": "Cuci Setrika",
+        "kategori": "Kiloan",
+        "harga": 8000,
+        "estimasi": "3 hari"
+    },
+    {
+        "id": "L003",
+        "nama": "Setrika Saja",
+        "kategori": "Kiloan",
+        "harga": 5000,
+        "estimasi": "1 hari"
+    },
+    {
+        "id": "L004",
+        "nama": "Bed Cover",
+        "kategori": "Satuan",
+        "harga": 25000,
+        "estimasi": "3 hari"
+    },
+    {
+        "id": "L005",
+        "nama": "Bantal",
+        "kategori": "Satuan",
+        "harga": 20000,
+        "estimasi": "3 hari"
+    }
+]

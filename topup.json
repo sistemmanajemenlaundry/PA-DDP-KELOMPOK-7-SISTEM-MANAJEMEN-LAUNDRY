@@ -1,0 +1,17 @@
+[
+    {
+        "kode": "L001",
+        "nama_paket": "Top Up Hemat",
+        "nominal": 50000
+    },
+    {
+        "kode": "L002",
+        "nama_paket": "Top Up Reguler",
+        "nominal": 100000
+    },
+    {
+        "kode": "L003",
+        "nama_paket": "Top Up Jumbo",
+        "nominal": 200000
+    }
+]

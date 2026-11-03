@@ -1,0 +1,21 @@
+[
+    {
+        "username": "Admin 1",
+        "password": "1234",
+        "role": "admin"
+    },
+    {
+        "username": "Lintang",
+        "password": "1234",
+        "no_telp": "09019301930",
+        "role": "user",
+        "saldo": 1212000
+    },
+    {
+        "username": "Budi",
+        "password": "0987",
+        "no_telp": "081500000001",
+        "role": "user",
+        "saldo": 30000
+    }
+]
