@@ -154,9 +154,55 @@ Program menu admin dapat dijalankan ketika pengguna berhasil login sebagai admin
 <img width="731" height="717" alt="Manajemen layanan" src="https://github.com/user-attachments/assets/6f79fadc-0120-431f-b0a3-46ea90a20021" /><br>
 Program ini dapat dijalankan jika pengguna memilih opsi 1. Fungsi manajemen_layanan() menampilkan menu utama pengelolaan layanan yang berisi pilihan untuk melihat, menambah, mengedit, menghapus, dan kembali ke menu admin. Semua data produk disimpan dalam file layanan.json yang digunakan oleh setiap fungsi terkait. Setelah menampilkan menu, program meminta admin memilih opsi dari 1 hingga 5. Pilihan 1 menampilkan daftar layanan melalui fungsi lihat_daftar(), pilihan 2 menambahkan layanan baru dengan tambah_layanan(), pilihan 3 mengedit data layanan melalui edit_layanan(), dan pilihan 4 menghapus layanan menggunakan hapus_layanan(). Jika admin memilih opsi 5, program akan memanggil fungsi admin() untuk kembali ke menu sebelumnya dan menghentikan perulangan.Jika admin memasukkan angka selain 1 sampai 5, program akan menampilkan pesan “Pilihan tidak valid, Silakan coba lagi”, dan meminta admin untuk memasukkan pilihan ulang yang benar.<br>
 
-## 13. Fungsi lihat_daftar<br>
+## 13. Fungsi Lihat Daftar Layanan<br>
 <img width="727" height="597" alt="Lihat daftar layanan" src="https://github.com/user-attachments/assets/c12fa4f4-26ae-40a9-9fc2-0c5eb68c80a3" /><br>
 Fungsi lihat_daftar() menggunakan blok try-except untuk membaca data dari file JSON yang diberikan ke dalam list kosong jika terjadi kesalahan, lalu memeriksa ketersediaan data untuk menampilkan pesan "Layanan Belum Tersedia" jika kosong atau menyusun serta mencetak data tersebut ke dalam bentuk tabel berformat PrettyTable dengan kolom id, nama, harga, estimasi, dan kategori sebelum meminta input untuk melanjutkan.<br>
+
+## 14. Fungsi Tambah Layanan<br>
+<img width="922" height="822" alt="Tambah layanan" src="https://github.com/user-attachments/assets/41475435-e829-4022-bff4-b08b84c220f3" /><br>
+Fungsi tambah_layanan() menampilkan header "TAMBAH LAYANAN", membaca data yang ada dari file JSON atau menginisialisasikannya sebagai list kosong jika terjadi kesalahan, lalu meminta input dari pengguna berupa ID dan nama layanan. Selanjutnya, program menggunakan perulangan while True dengan validasi try-except dan pengecekan angka negatif untuk memastikan harga serta estimasi diisi dengan angka valid yang tidak kurang dari nol, serta meminta input kategori. Program kemudian memeriksa apakah ID atau nama layanan tersebut sudah ada di dalam data secara case-insensitive untuk mencegah duplikasi, dan jika belum ada, data baru akan ditambahkan ke dalam list, disimpan kembali ke file JSON dengan format yang rapi menggunakan json.dump(), menampilkan pesan keberhasilan, serta memanggil fungsi lihat_daftar().<br>
+
+## 15. Fungsi Edit Layanan<br>
+<img width="787" height="851" alt="Edit layanan" src="https://github.com/user-attachments/assets/d2aeaf91-1701-4648-a305-86407c381341" /><br>
+<img width="1257" height="432" alt="Edit layanan (2)" src="https://github.com/user-attachments/assets/e515e42f-761b-42b9-9deb-32171bb07582" /><br>
+Fungsi edit_layanan() menangani proses pengubahan data layanan dengan terlebih dahulu membaca dan menampilkan daftar layanan yang ada dari file JSON, lalu meminta admin memasukkan ID layanan yang ingin diubah. Jika data ditemukan, program menampilkan detail lama dan memungkinkan admin memasukkan data baru untuk nama, harga, estimasi, dan kategori—di mana jika input dikosongkan maka data lama akan tetap dipertahankan, dilengkapi validasi perulangan while untuk memastikan harga serta estimasi bernilai angka valid dan tidak negatif. Setelah itu, program memperbarui data di dalam memori, menyimpan kembali perubahannya ke file JSON menggunakan json.dump(), menampilkan pesan keberhasilan, serta memanggil fungsi lihat_daftar(), atau menampilkan pesan kesalahan jika ID layanan tidak ditemukan.<br>
+
+## 16. Fungsi Hapus Layanan<br>
+<img width="1017" height="696" alt="Hapus layanan" src="https://github.com/user-attachments/assets/d6b13fca-d63e-4487-9ed1-ada306b7935b" /><br>
+Fungsi hapus_layanan() menampilkan header "HAPUS LAYANAN", membaca data dari file JSON atau menginisialisasikannya sebagai list kosong jika terjadi kesalahan, lalu memanggil fungsi lihat_daftar() dan meminta admin memasukkan ID produk yang ingin dihapus. Program kemudian melakukan perulangan untuk mencari item dengan ID yang sesuai, menghapusnya dari list jika ditemukan, lalu meminta konfirmasi penghapusan ("ya/tidak") kepada pengguna. Jika pengguna mengetik "tidak", program akan membatalkan penghapusan dan keluar, sedangkan jika dikonfirmasi, program akan menyimpan kembali data yang telah diperbarui ke file JSON menggunakan json.dump(), menampilkan pesan keberhasilan, serta memanggil fungsi lihat_daftar(), atau menampilkan pesan bahwa produk dengan ID tersebut tidak ditemukan jika tidak ada yang cocok.<br>
+
+## 17. Manajemen Pelanggan<br>
+<img width="1141" height="740" alt="Manajemen pelanggan" src="https://github.com/user-attachments/assets/9242fbd3-a4f5-4109-8067-d85cbcedb382" /><br>
+Fungsi manajemen_pelanggan() mengelola menu utama pengelolaan pelanggan yang menyimpan seluruh data pengguna pada file users.json, dengan menyediakan opsi 1 hingga 4 bagi admin untuk melihat daftar pelanggan melalui fungsi lihat_pelanggan(), menambah pelanggan baru dengan tambah_pelanggan(), mengubah data pelanggan melalui edit_pelanggan(), atau kembali ke menu sebelumnya dengan memanggil fungsi admin() yang menghentikan perulangan, serta menampilkan pesan peringatan jika input pilihan tidak valid.<br>
+
+## 18. Fungsi Lihat Pelanggan<br>
+<img width="1157" height="745" alt="Lihat pelanggan" src="https://github.com/user-attachments/assets/b98599b1-67b1-49ce-82f5-e8575a7195aa" /><br>
+Fungsi lihat_pelanggan() menampilkan header "LIHAT PELANGGAN", membaca data dari file JSON pengguna atau menginisialisasikannya sebagai list kosong jika terjadi kesalahan, lalu menyaring data untuk hanya menampilkan akun yang bukan ber-role "admin". Jika data pelanggan kosong setelah disaring, program menampilkan pesan "Belum ada nama pelanggan yang terdaftar.", sedangkan jika ada, program menyusun dan mencetak datanya ke dalam bentuk tabel berformat PrettyTable dengan kolom username, no_telp, dan saldo sebelum meminta input dari pengguna untuk melanjutkan.<br>
+
+## 19. Fungsi Tambah Pelanggan<br>
+<img width="946" height="852" alt="tambah pelanggan" src="https://github.com/user-attachments/assets/5a0aa515-17e1-4f6e-91b6-a12555fdc059" /><br>
+Fungsi tambah_pelanggan() menampilkan header "TAMBAH PELANGGAN", membaca data dari file JSON pengguna atau menginisialisasikannya sebagai list kosong jika terjadi kesalahan, lalu meminta input username dari admin dan memastikan username tersebut tidak kosong. Selanjutnya, program menggunakan perulangan while True bersama pustaka pwinput untuk meminta password dengan panjang antara 4 hingga 8 karakter serta meminta nomor telepon. Program memeriksa apakah username sudah terdaftar untuk mencegah duplikasi, dan jika belum ada, data baru dengan role "user" dan saldo awal 0 akan ditambahkan ke dalam list, disimpan kembali ke file JSON menggunakan json.dump(), menampilkan pesan keberhasilan, serta memanggil fungsi lihat_pelanggan().<br>
+
+## 20. Fungsi edit pelanggan<br>
+<img width="1077" height="846" alt="edit pelanggan" src="https://github.com/user-attachments/assets/6433d9b0-ac2e-419e-98a3-ef575f8e3960" /><br>
+ungsi edit_pelanggan() menampilkan header "EDIT PELANGGAN", membaca data dari file JSON pengguna, dan menangani error dengan menampilkan pesan jika file tidak ditemukan. Program kemudian meminta admin memasukkan username yang ingin diubah, mencari data pelanggan yang sesuai menggunakan fungsi next(), serta menampilkan pesan kesalahan jika username tidak ditemukan. Jika data ditemukan, program mencetak detail data lama—dengan menyembunyikan password menjadi bintang-bintang (*****) lalu meminta input nomor telepon baru di mana jika dikosongkan (menekan Enter), nomor telepon lama akan tetap dipertahankan. Terakhir, program menyimpan perubahan tersebut kembali ke file JSON menggunakan json.dump(), menampilkan pesan keberhasilan, dan menjeda eksekusi selama 2 detik
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
