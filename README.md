@@ -86,6 +86,42 @@ Pengguna akan memasukkan data baru, lalu program akan memvalidasi, jika tidak va
 4. Menu User <br>
 <img width="1600" height="1392" alt="image" src="https://github.com/user-attachments/assets/73f91480-c4c9-4203-86ba-a3eeca18cb11" />
 
+# Alur Panduan Penggunaan Program
+## 1. Penggunaan Library dan Modul<br>
+<img width="1330" height="252" alt="image" src="https://github.com/user-attachments/assets/0947037c-ea84-4e62-8e4f-0b8ac52b05a9" /><br>
+
+Di awal program ini kami menggunakan beberapa library bawaan Python dan juga tambahannya seperti os, json, time, random, pwinput, dan prettytable. Os berfungsi untuk mengecek keberadaan file dan membersihkan tampilan terminal agar lebih rapi. Json digunakan untuk membaca dan menulis data dalam format JSON, sehingga data user, saldo, dan transaksi tetap tersimpan meskipun program ditutup. Time digunakan untuk memberi jeda antar tampilan menu dan mencatat waktu, sedangkan random untuk menghasilkan kode acak seperti ID transaksi. Pwinput berfungsi mengubah karakter password menjadi tanda bintang agar lebih aman. Terakhir, prettytable digunakan untuk menampilkan data dalam bentuk tabel yang lebih rapi dan mudah dibaca.<br>
+
+## 2. Penggunaan Function Pendukung<br>
+### Function Load dan Save ke File JSON
+<img width="1022" height="732" alt="image" src="https://github.com/user-attachments/assets/cf210a32-69e1-47b3-9aae-4fb080c24681" /><br>
+Fungsi load_json digunakan untuk membaca data dari file JSON, seperti transaksi, layananm dan top-up. Jika file tidak ditemukan atau isinya rusak, program menampilkan pesan error dan ngembalikan list kosong agar program tidak berhenti. Fungsi save_json digunakan untuk menyimpan data ke file JSON dengan format rapi (indent=4) dan dilengkapi try-except untuk menaampilkan pesan jika penyimpanan gagal. fungsi load_user bekerja seperti load_json, tetapi khusus untuk file users.json<br>
+### Function Load User, Save User, Cari User<br>
+<img width="852" height="854" alt="image" src="https://github.com/user-attachments/assets/68f04127-3ec4-4368-ba3a-5e3330b44f48" /><br> 
+- load_user : membaca data semua pengguna dari file users.json, dan mengembalikanya dalam bentuk list. Jika file tidak ditemukan atau isinya rusak, program menampilkan pesan error. Fungsi ini dipakai saat login, registrasi, dan top-up untuk mengambil daftar user yang sudah terdaftar.<br>
+- cari_user : mencari satu user dari daftar berdasarakan username. Fungsi ini menelusuri list satu persatu, dan kalau username cocok, hasilnya None. Fungsi ini dipakai untuk mengambil data untuk mengambil data dan saldo pengguna saat top-up, order, dan menampilkan menu user. <br>
+- save_users : mencari data pengguna ke users.json dengan format rapi (indent=4). Fungsi ini dipanggil setiap ada perubahan, misalnya saat ada akun baru yang mendaftar atau saldo bertambah setelah top-up. Ada try-except juga supaya kalau penyimpanan gagal, program menampilkan pesan dan tidak langsung berhenti.<br>
+## 3. Function Menu Utama 
+Fungsi ini membersikan layar lalu menampilkan tampilan menu utama dengan tiga pilihan menu yaitu login, registrasi, dan  keluar. Di bawahnya ada perulangan while True yang terus menampilkan menu dan membaca pilihan pengguna. Pilihan 1 memanggil login(), pilihan 2 memanggil regis(), dan pilihan 3 mencetak "terima kasih!" lalu break ntuk menghentikan program. Input selain itu menampilkan pesan tidak valid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
