@@ -100,11 +100,14 @@ Fungsi load_json digunakan untuk membaca data dari file JSON, seperti transaksi,
 <img width="852" height="854" alt="image" src="https://github.com/user-attachments/assets/68f04127-3ec4-4368-ba3a-5e3330b44f48" /><br> 
 - load_user : membaca data semua pengguna dari file users.json, dan mengembalikanya dalam bentuk list. Jika file tidak ditemukan atau isinya rusak, program menampilkan pesan error. Fungsi ini dipakai saat login, registrasi, dan top-up untuk mengambil daftar user yang sudah terdaftar.<br>
 - cari_user : mencari satu user dari daftar berdasarakan username. Fungsi ini menelusuri list satu persatu, dan kalau username cocok, hasilnya None. Fungsi ini dipakai untuk mengambil data untuk mengambil data dan saldo pengguna saat top-up, order, dan menampilkan menu user. <br>
-- save_users : mencari data pengguna ke users.json dengan format rapi (indent=4). Fungsi ini dipanggil setiap ada perubahan, misalnya saat ada akun baru yang mendaftar atau saldo bertambah setelah top-up. Ada try-except juga supaya kalau penyimpanan gagal, program menampilkan pesan dan tidak langsung berhenti.
+- save_users : mencari data pengguna ke users.json dengan format rapi (indent=4). Fungsi ini dipanggil setiap ada perubahan, misalnya saat ada akun baru yang mendaftar atau saldo bertambah setelah top-up. Ada try-except juga supaya kalau penyimpanan gagal, program menampilkan pesan dan tidak langsung berhenti.<br>
 
 ## 3. Function Menu Utama <br>
 
+<img width="1354" height="858" alt="image" src="https://github.com/user-attachments/assets/c022eb1a-85a8-4885-a697-acfd4306f858" /><br>
+
 Fungsi ini membersikan layar lalu menampilkan tampilan menu utama dengan tiga pilihan menu yaitu login, registrasi, dan  keluar. Di bawahnya ada perulangan while True yang terus menampilkan menu dan membaca pilihan pengguna. Pilihan 1 memanggil login(), pilihan 2 memanggil regis(), dan pilihan 3 mencetak "terima kasih!" lalu break ntuk menghentikan program. Input selain itu menampilkan pesan tidak valid.<br>
+
 ## 4. Function Login <br>
 
 <img width="1308" height="1226" alt="image" src="https://github.com/user-attachments/assets/e55fd8fd-9181-4004-9386-de129e4b67f8" />
@@ -114,9 +117,44 @@ Fungsi ini memberi pengguna 3 kesempatan untuk login. Program meminta username d
 
 <img width="1036" height="1226" alt="image" src="https://github.com/user-attachments/assets/579b5fe0-0157-412c-a434-acd80c005133" />
 <img width="700" height="480" alt="image" src="https://github.com/user-attachments/assets/da8d67c4-0436-4f29-88fa-81cc6b542cda" />
+Fungsi ini membuat akun pelanggan baru. program memvalidasi bahwa username tidak kosong dan belum dipakai, password 4-8 karakter, serta nomor telepon berupa angka 10-13 digit. Jika semua valid, data baru ditambahkan dengan role user dan saldo awal 0, lalu disimpan ke users.json dengan save_users.
 
 ## 6. Function Menu User <br>
 <img width="1326" height="1150" alt="image" src="https://github.com/user-attachments/assets/35a7f3b1-e23a-41e5-9a25-03b6b71f9747" /><br> 
+Fungsi ini adalah menu utama setelah akun dengan role pelanggan berhasil login. Setiap kali menu tampil, program membaca ulang saldo terbaru dari users.json dan menampilkannya di bagian atas, menu memiliki 5 pilihan yaitu katalog Layanan, Top-Up Saldo, Order Laundry, Riwayat Transaksi, dan Logout. Pilihan 1-4 memanggil fungsi masing-masing dan kembali ke menu utama.<br>
+
+## 7. Function Katalog Layanan<br>
+<img width="1538" height="568" alt="image" src="https://github.com/user-attachments/assets/3f5fa965-13f5-4ce2-9dd1-a2ab16b303d3" /><br>
+Fungsi tampilan_katalog dan katalog_layanan adalah untuk menampilkan daftar layanan dalam bentuk tabel PrettyTable dengan kolom ID, Nama, Kategori, Harga (berformat Rp), dan estimasi. Fungsi katalog membaca layanan.json, lalu memeanggil tampilan katalog jika data ada, atau menampilkan "Belum ada layanan" jika kosong. Fungsi tampilan_katalog dipisah karena juga dipakai ulang oleh order. 
+
+## 8. Function Top Up Saldo<br>
+<img width="1112" height="1064" alt="image" src="https://github.com/user-attachments/assets/ff71fe9e-30da-4883-ad7c-531d71d5d3e0" /><br>
+<br<img width="1292" height="410" alt="image" src="https://github.com/user-attachments/assets/f5d8eeef-d6c7-45ec-be53-7febeb442771" /><br>
+Fungsi ini menambah saldo pelanggan lewat paket top-up. program menampilkan daftar paket dari topup.json<br> 
+
+## 9. Function Order Laundry<br>
+<img width="2362" height="1324" alt="image" src="https://github.com/user-attachments/assets/46c007fc-ae59-407f-b851-4948e7dbfc6a" /><br>
+<img width="2152" height="1370" alt="image" src="https://github.com/user-attachments/assets/be91e153-5090-44a8-b017-9d09242643eb" /><br>
+<img width="1246" height="634" alt="image" src="https://github.com/user-attachments/assets/a334f1c6-c459-43f2-a4c6-bdfd91738d13" /><br>
+Fngsi ini memproses pemesanan laundry dan alurnya cukup panjang. Pertama, program menampilkan katalog dan meminta ID layanan, lalu memvalidasinya. Jika kategori layanan "kiloan", pelanggan mengisi berat (Kg) dalam bentuk desimal, selain itu mengisi jumlah (pcs). Total dihitung dari harga dikali dengan jumlah, lalu program mengecek apakah saldo cukup. Jika cukup, program menampilkan ringkasan dan meminta konfirmasi ya/tidak. Setelah dikonfirmasi, saldo dipotong dan disimpan, ID transaksi acak "TRX-XXX" dibuat. Data transaksi dengan status "lunas" serta tanggal otomatis disimpan ke transaksi.json. Terakhir, fungsi cetak_invoice menampilkan struk.<br>
+
+## 11. Function Cetak Invoice<br>
+<img width="1068" height="586" alt="image" src="https://github.com/user-attachments/assets/84290f01-6e47-49ba-9a06-7873fe27f6fe" /><br>
+Fungsi ini menampilkan struk setelah pelanggan berhasil melakukan order. Fungsi menerima dua data, yaitu data transaksi yang baru dibuat dan sisa saldo pelanggan. Program menampilkan judul "INVOICE LAUNDRY" lalu mencetak struk berisi nama pelanggan, ID transaksi, tanggal layanan, jumlah beserta satuannya (kg atau pcs), total harga dan status pembayaran, dan sisa saldo. Tampilan dipisahkan dengan pembayaran, dan sisa saldo. Pelanggan dapat menunggu pelanggan menekan enter untuk kembali.<br>
+
+## 10. Function Riwayat Transaksi<br>
+<img width="1206" height="1110" alt="image" src="https://github.com/user-attachments/assets/ba3b6e13-e145-4abf-8eff-536399a0a33b" /><br>
+Fungsi ini Menampilkan semua transaksi milik pelanggan yang sedang login. program embaca file transksi.json dan menyaring hanya transaksi dengan username yang sama. Jika kosong, munvul "belum ada transaksi". Tetapi jika ada program akan mencetak struk dari setiap transaksi dan total pengeluaran.<br> 
+
+
+
+
+
+
+
+
+
+
 
 
 
