@@ -325,72 +325,72 @@ Muncul setelah memilih menu 2 di menu utama. pengguna mengisi username baru, pas
 <img width="468" height="420" alt="image" src="https://github.com/user-attachments/assets/672c266d-833f-4a73-a8bc-b50478426a10" /><br>
 
 ## 10. Menu Utama Laundry<br>
-Tangkapan layar ini menampilkan proses awal masuk ke dalam sistem melalui Menu Utama Laundry dengan memilih opsi login, memasukkan kredensial admin (username dan password), hingga berhasil masuk dan diarahkan ke halaman Menu Admin utama.<br>
+menampilkan proses awal masuk ke dalam sistem melalui Menu Utama Laundry dengan memilih opsi login, memasukkan kredensial admin (username dan password), hingga berhasil masuk dan diarahkan ke halaman Menu Admin utama.<br>
 
 <img width="610" height="523" alt="image" src="https://github.com/user-attachments/assets/a3e761b1-7ce9-463e-979b-0ce25598f430" /><br>
 
 ## 11. Lihat Daftar Layanan<br>
-Tangkapan layar ini menunjukkan menu Manajemen Layanan saat admin memilih opsi untuk melihat daftar layanan, di mana sistem menampilkan tabel berisi informasi lengkap mengenai ID, nama, harga, estimasi waktu, dan kategori dari setiap layanan laundry yang tersedia.<br>
+menunjukkan menu Manajemen Layanan saat admin memilih opsi untuk melihat daftar layanan, di mana sistem menampilkan tabel berisi informasi lengkap mengenai ID, nama, harga, estimasi waktu, dan kategori dari setiap layanan laundry yang tersedia.<br>
 
 <img width="622" height="600" alt="image" src="https://github.com/user-attachments/assets/39ef7a99-f1b4-47dd-b8ea-f142563dd1f0" /><br>
 
 ## 12. Tambah Layanan Baru<br>
-Tangkapan layar ini memperlihatkan proses penambahan layanan laundry baru ke dalam sistem dengan memasukkan data seperti ID, nama, harga, estimasi, dan kategori, yang kemudian langsung memperbarui dan menampilkan daftar layanan terbaru.<br>
+memperlihatkan proses penambahan layanan laundry baru ke dalam sistem dengan memasukkan data seperti ID, nama, harga, estimasi, dan kategori, yang kemudian langsung memperbarui dan menampilkan daftar layanan terbaru.<br>
 
 <img width="616" height="617" alt="image" src="https://github.com/user-attachments/assets/e84d2419-805f-4664-b2f7-e4386159a71c" /><br>
 
 ## 13. Edit Data layanan<br>
-Tangkapan layar ini menampilkan proses pengubahan atau pengeditan data layanan yang sudah ada berdasarkan ID tertentu, di mana admin dapat memperbarui informasi nama, harga, estimasi, atau kategori layanan sesuai kebutuhan.<br>
+menampilkan proses pengubahan atau pengeditan data layanan yang sudah ada berdasarkan ID tertentu, di mana admin dapat memperbarui informasi nama, harga, estimasi, atau kategori layanan sesuai kebutuhan.<br>
 
 <img width="435" height="572" alt="image" src="https://github.com/user-attachments/assets/672432d0-a479-4bcf-91ba-85165a49f155" /><br>
 
 ## 14. Hapus Layanan<br>
-Tangkapan layar ini menunjukkan proses penghapusan suatu layanan dari sistem berdasarkan ID produk yang dipilih, yang disertai dengan konfirmasi keamanan sebelum data layanan tersebut berhasil dihapus dari daftar.<br>
+menunjukkan proses penghapusan suatu layanan dari sistem berdasarkan ID produk yang dipilih, yang disertai dengan konfirmasi keamanan sebelum data layanan tersebut berhasil dihapus dari daftar.<br>
 
 <img width="438" height="459" alt="image" src="https://github.com/user-attachments/assets/3174a104-b76c-4b8c-b2c2-bc02da94b07f" /><br>
 
 ## 15. Kembali ke Menu Admin dari Manajemen Layanan<br>
-Tangkapan layar ini memperlihatkan tindakan admin saat memilih opsi untuk keluar dari sub-menu Manajemen Layanan dan kembali ke halaman utama Menu Admin.<br>
+memperlihatkan tindakan admin saat memilih opsi untuk keluar dari sub-menu Manajemen Layanan dan kembali ke halaman utama Menu Admin.<br>
 
 <img width="492" height="290" alt="image" src="https://github.com/user-attachments/assets/1cd05411-1cae-4b08-93bb-e2a81550f922" /><br>
 
 ## 16. Manajemen Pelanggan (Lihat Daftar Pelanggan)<br>
-Tangkapan layar ini menampilkan akses ke menu Manajemen Pelanggan untuk melihat daftar seluruh akun pelanggan terdaftar (di luar akun admin) beserta informasi username, nomor telepon, dan saldo mereka dalam bentuk tabel.<br>
+menampilkan akses ke menu Manajemen Pelanggan untuk melihat daftar seluruh akun pelanggan terdaftar (di luar akun admin) beserta informasi username, nomor telepon, dan saldo mereka dalam bentuk tabel.<br>
 
 <img width="975" height="704" alt="image" src="https://github.com/user-attachments/assets/c5e7f8d3-25e6-42f1-8376-85890ab35f77" /><br>
 
 ## 17. Tambah Pelanggan Baru<br>
-Tangkapan layar ini memperlihatkan proses pendaftaran atau penambahan pelanggan baru ke dalam sistem oleh admin dengan memasukkan data username, password, dan nomor telepon.<br>
+memperlihatkan proses pendaftaran atau penambahan pelanggan baru ke dalam sistem oleh admin dengan memasukkan data username, password, dan nomor telepon.<br>
 
 <img width="975" height="578" alt="image" src="https://github.com/user-attachments/assets/edfe4187-05b6-4fb3-b060-db4feb50364c" /><br>
 
 ## 18. Edit Data Pelanggan<br>
-Tangkapan layar ini menunjukkan proses pembaruan informasi data pelanggan yang sudah terdaftar, khususnya dalam memperbarui nomor telepon pelanggan berdasarkan username yang dipilih.<br>
+menunjukkan proses pembaruan informasi data pelanggan yang sudah terdaftar, khususnya dalam memperbarui nomor telepon pelanggan berdasarkan username yang dipilih.<br>
 
 <img width="975" height="735" alt="image" src="https://github.com/user-attachments/assets/3bf867fb-cb68-4779-b14c-f3f660eb08a3" /><br>
 
 ## 19. Manajemen Top-Up (Tambah Paket Top-Up Baru)<br>
-Tangkapan layar ini menampilkan pengelolaan paket top-up saldo, di mana admin dapat melihat daftar paket yang ada serta menambahkan paket top-up baru dengan memasukkan kode, nama paket, dan nominal saldonya.<br>
+menampilkan pengelolaan paket top-up saldo, di mana admin dapat melihat daftar paket yang ada serta menambahkan paket top-up baru dengan memasukkan kode, nama paket, dan nominal saldonya.<br>
 
 <img width="438" height="485" alt="image" src="https://github.com/user-attachments/assets/31a77cbb-5936-4005-b6a3-1d0c292c7747" /><br>
 
 ## 20. Hapus Paket Top-Up<br>
-Tangkapan layar ini memperlihatkan proses penghapusan paket top-up tertentu dari sistem berdasarkan kode paket yang dimasukkan oleh admin.<br>
+memperlihatkan proses penghapusan paket top-up tertentu dari sistem berdasarkan kode paket yang dimasukkan oleh admin.<br>
 
 <img width="643" height="406" alt="image" src="https://github.com/user-attachments/assets/1959d2e1-f3d6-4013-89dc-e28a9d28b442" /><br>
 
 ## 21. Riwayat Top-Up Pelanggan<br>
-Tangkapan layar ini menampilkan daftar riwayat transaksi top-up saldo yang pernah dilakukan oleh para pelanggan beserta total keseluruhan dana top-up yang masuk ke dalam sistem.<br>
+menampilkan daftar riwayat transaksi top-up saldo yang pernah dilakukan oleh para pelanggan beserta total keseluruhan dana top-up yang masuk ke dalam sistem.<br>
 
 <img width="591" height="658" alt="image" src="https://github.com/user-attachments/assets/e6948a9e-331f-417b-aaa4-2911ada9c309" /><br>
 
 ## 22. Laporan Keuangan Usaha Laundry<br>
-Tangkapan layar ini menunjukkan halaman Laporan Keuangan yang merinci total pendapatan dari order laundry, total pemasukan dari top-up saldo, total keseluruhan keuangan masuk, serta jumlah total transaksi dan aktivitas top-up yang telah diselesaikan.<br>
+menunjukkan halaman Laporan Keuangan yang merinci total pendapatan dari order laundry, total pemasukan dari top-up saldo, total keseluruhan keuangan masuk, serta jumlah total transaksi dan aktivitas top-up yang telah diselesaikan.<br>
 
 <img width="526" height="367" alt="image" src="https://github.com/user-attachments/assets/b984dac6-901c-4f4a-849c-385c24045c8e" /><br>
 
 ## 23. Keluar / Kembali ke Menu Utama Laundry<br>
-Tangkapan layar ini memperlihatkan saat admin memilih opsi keluar dari Menu Admin untuk kembali ke tampilan awal Menu Utama Laundry.<br>
+memperlihatkan saat admin memilih opsi keluar dari Menu Admin untuk kembali ke tampilan awal Menu Utama Laundry.<br>
 
 <img width="597" height="374" alt="image" src="https://github.com/user-attachments/assets/6b7d6aaf-a0eb-4ee6-8067-e83cad0c566c" /><br>
 
