@@ -100,9 +100,26 @@ Fungsi load_json digunakan untuk membaca data dari file JSON, seperti transaksi,
 <img width="852" height="854" alt="image" src="https://github.com/user-attachments/assets/68f04127-3ec4-4368-ba3a-5e3330b44f48" /><br> 
 - load_user : membaca data semua pengguna dari file users.json, dan mengembalikanya dalam bentuk list. Jika file tidak ditemukan atau isinya rusak, program menampilkan pesan error. Fungsi ini dipakai saat login, registrasi, dan top-up untuk mengambil daftar user yang sudah terdaftar.<br>
 - cari_user : mencari satu user dari daftar berdasarakan username. Fungsi ini menelusuri list satu persatu, dan kalau username cocok, hasilnya None. Fungsi ini dipakai untuk mengambil data untuk mengambil data dan saldo pengguna saat top-up, order, dan menampilkan menu user. <br>
-- save_users : mencari data pengguna ke users.json dengan format rapi (indent=4). Fungsi ini dipanggil setiap ada perubahan, misalnya saat ada akun baru yang mendaftar atau saldo bertambah setelah top-up. Ada try-except juga supaya kalau penyimpanan gagal, program menampilkan pesan dan tidak langsung berhenti.<br>
-## 3. Function Menu Utama 
-Fungsi ini membersikan layar lalu menampilkan tampilan menu utama dengan tiga pilihan menu yaitu login, registrasi, dan  keluar. Di bawahnya ada perulangan while True yang terus menampilkan menu dan membaca pilihan pengguna. Pilihan 1 memanggil login(), pilihan 2 memanggil regis(), dan pilihan 3 mencetak "terima kasih!" lalu break ntuk menghentikan program. Input selain itu menampilkan pesan tidak valid.
+- save_users : mencari data pengguna ke users.json dengan format rapi (indent=4). Fungsi ini dipanggil setiap ada perubahan, misalnya saat ada akun baru yang mendaftar atau saldo bertambah setelah top-up. Ada try-except juga supaya kalau penyimpanan gagal, program menampilkan pesan dan tidak langsung berhenti.
+
+## 3. Function Menu Utama <br>
+
+Fungsi ini membersikan layar lalu menampilkan tampilan menu utama dengan tiga pilihan menu yaitu login, registrasi, dan  keluar. Di bawahnya ada perulangan while True yang terus menampilkan menu dan membaca pilihan pengguna. Pilihan 1 memanggil login(), pilihan 2 memanggil regis(), dan pilihan 3 mencetak "terima kasih!" lalu break ntuk menghentikan program. Input selain itu menampilkan pesan tidak valid.<br>
+## 4. Function Login <br>
+
+<img width="1308" height="1226" alt="image" src="https://github.com/user-attachments/assets/e55fd8fd-9181-4004-9386-de129e4b67f8" />
+Fungsi ini memberi pengguna 3 kesempatan untuk login. Program meminta username dan password yang disembunyikan menggunakan pwinput yang kemudian dicocokan dengan data di users.json. jika cocok, program menampilkan pesan selamat datang dan mengarahkan sesuai roleh: admin ke admin() dan user ke menu_user(). Jika salah, kesempatan berkurang satu dan tersisa akan ditampilkan sampai habis.
+
+## 5. Function Registrasi <br>
+
+<img width="1036" height="1226" alt="image" src="https://github.com/user-attachments/assets/579b5fe0-0157-412c-a434-acd80c005133" />
+<img width="700" height="480" alt="image" src="https://github.com/user-attachments/assets/da8d67c4-0436-4f29-88fa-81cc6b542cda" />
+
+## 6. Function Menu User <br>
+<img width="1326" height="1150" alt="image" src="https://github.com/user-attachments/assets/35a7f3b1-e23a-41e5-9a25-03b6b71f9747" /><br> 
+
+
+
 
 
 
