@@ -24,10 +24,10 @@
 
 | Nama Anggota | NIM | Peran & Tanggung Jawab | GitHub |
 | :---: | :--- | :---: | :--- |
-| **Shafa Aurellia Rufina Maharani** | `2609116001` | Peran| @shafarufina8 (https://github.com/shafarufina8) |
-| **Nazwa Dwi Amelia Putri** | `2609116008` | Peran | @ameapples (https://github.com/ameapples) |
-| **Deboraa Lintang Apsari** | `2609116011` | Peran | @deboralintangapsari (https://github.com/deboralintangapsari) 
-| **Raihanum Athaya Rana Insyra** | `2609116014` | Peran | @raihanumathaya(https://github.com/raihanumathaya) |
+| **Shafa Aurellia Rufina Maharani** | `2609116001` | Program halaman admin & cek halaman program | @shafarufina8 (https://github.com/shafarufina8) |
+| **Nazwa Dwi Amelia Putri** | `2609116008` | Laporan Bab 2 dan Bab 3 | @ameapples (https://github.com/ameapples) |
+| **Deboraa Lintang Apsari** | `2609116011` | Flowchart dan referensi konsep program | @deboralintangapsari (https://github.com/deboralintangapsari) 
+| **Raihanum Athaya Rana Insyra** | `2609116014` | Laporan Bab 1, halaman utama & halaman user | @raihanumathaya(https://github.com/raihanumathaya) |
 
 ---
 
@@ -78,13 +78,44 @@ Setiap pilihan akan masuk kedalam konektor nya masing masing, dan apabila admin 
 
 `Proses Read` <br>
 
-Sistem akan membaca seluruh data dari file json dan program akan menampilkan layanan yang ada.<br>
+Sistem akan membaca seluruh data dari file json dan program akan menampilkan layanan yang ada.<br
+                                                                                                
 `Proses Create` <br>
-Pengguna akan memasukkan data baru, lalu program akan memvalidasi, jika tidak valid maka program akan menampilkan "Input Tidak Valid", dan meminta untuk memasukkan data baru, jika valid maka progra  
+
+Pengguna akan memasukkan data baru, lalu program akan memvalidasi, jika tidak valid maka program akan menampilkan "Input Tidak Valid", dan meminta untuk memasukkan data baru, jika valid maka prograJika valid maka sistem akan mengecek apakah data/username sudah terdaftar di file JSON. Jika sudah ada maka program akan menampilkan "Data sudah terdaftar". Jika belum, data akan disimpan dan muncul esan "Data berhasil ditambah". 
+
+`Proses Update (U)` 
+Pengguna akan memasukkan ID/username yang ingin diubah. Jika data ditemukan, muncul pesan "Data tidak ditemukan". Apabila input valid, maka perubahan akan disimpan kedalam file json dan muncul pesan "Data berhasil diubah"
+
+`Proses Delete (D)`
+
+Penggua akan memasukkan ID/Username yang ingin dihapus. Jika data ditemukan, sistem menaampilkan rincian data dan meminta konfirmasi hapus (y/n). Jika dijawab Ya, data akan dihapus dari file json dan muncul pesan "data berhasil dihapus". Jika tidak, proses dibatalkan. 
+
+`Laporan Pendapatan (LP)`
+
+Pengguna akan memilih jenis laporan (1. Harian, 2. Bulanan, atau 3. Total).
+Sistem akan membaca transaksi, menyaring sesuai pilihan dan menjumlahkan totalnya, lalu menampilkan rincian jumlah transaksi dan total pendapatan ke layar
 
 
 4. Menu User <br>
-<img width="1600" height="1392" alt="image" src="https://github.com/user-attachments/assets/73f91480-c4c9-4203-86ba-a3eeca18cb11" />
+<img width="1600" height="1392" alt="image" src="https://github.com/user-attachments/assets/73f91480-c4c9-4203-86ba-a3eeca18cb11" /> <br>
+
+Program akan menampilkan menu user yaitu Katalog layanan, Saldo Top Up, Order Laundry, Riwayat Transaksi, Logout <br>
+
+`Katalog Layanan` <br>
+program akan membaca file dari json, mengecek apakah sudah ada layanan atau belum, jika tidak ada maka program akan menampilan "Belum ada layanan" dan jika sudah ada layanan maka Program akan menampilkan katalog layanan, user harus menekan tombol enter untuk kembali ke menu utama <br>
+
+`Top Up Saldo` <br>
+program akan membaca file dari json dan menampilkan saldo saat ini, program juga akan menampilkan paket top up, program akan mengecek apakah paket tersebut ada atau tidak, jika ada maka saldo akan ditambahkan ke akun user sesuai dengan nominal pada paket tersebut, perubahan akan disimpan kedalam folder json dan program akan menampilkan "Top Up berhasil" dan kembali ke menu utama. <br>
+
+`Order Laundry` <br>
+Program akan membaca file dari json, program akan mengecek apakah layanan tersedia, jika tidak makan program akan menampilkan "Belum ada layanan" dan jika terdapat layanan maka program akan menampilkan katalog layanan dan meminta user untuk memasukkan ID layanan, setelah itu program akan mengecek kembali apakah ID layanan nya ada, jika tidak ada maka program akan menampilkan "id layanan tidak ditemukan" dan akan kembali ke menu user, jika layanan ditemukan maka program akan bertanya apakah kategorinya kiloan, jika tidak berarti oderannya berupa satuan atau pcs, lalu program akan mengecek apakah input berupa angka lebih dari 0?, jika tidak maka program akan menampilkan "Input tidak valid", jika lebih dari 0 maka akan menghitung totalnya berdasarkan harga x jumlah, lalu program akan membaca data dari json, program akan melihat apakah saldo user cukup atau tidak, jika tidak maka program akan menampilkan "Saldo tidak mencukupi, silahkan top up!", jika saldo cukup maka program akan mengurangi saldo user sebesar total, lalu akan disimpan di file json dan program akan menampilkan "order berhasil". Dilakukan hal yang sama juga apabila ordernya kiloan. <br>
+
+`Riwayat Transaksi` <br> 
+Program akan membaca file dari json, lalu program akan mengambil transaksi dari user yang login, program akan mengecek apakah ada transaksi? jika tidak ada maka program akan menampilkan "Belum ada transaksi, balik ke menu", jika ada transaksi maka akan menampilkan riwayat transaksi dan menghitung total keseluruhan. <br>
+
+`Logout` <br>
+Program akan diakhiri dan kembali ke menu utama.
 
 # Alur Panduan Penggunaan Program
 ## 1. Penggunaan Library dan Modul<br>
