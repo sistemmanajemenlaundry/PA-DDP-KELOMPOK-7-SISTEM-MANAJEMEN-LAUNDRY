@@ -111,12 +111,12 @@ Fungsi ini membersikan layar lalu menampilkan tampilan menu utama dengan tiga pi
 ## 4. Function Login <br>
 
 <img width="1308" height="1226" alt="image" src="https://github.com/user-attachments/assets/e55fd8fd-9181-4004-9386-de129e4b67f8" />
-Fungsi ini memberi pengguna 3 kesempatan untuk login. Program meminta username dan password yang disembunyikan menggunakan pwinput yang kemudian dicocokan dengan data di users.json. jika cocok, program menampilkan pesan selamat datang dan mengarahkan sesuai roleh: admin ke admin() dan user ke menu_user(). Jika salah, kesempatan berkurang satu dan tersisa akan ditampilkan sampai habis.
+Fungsi ini memberi pengguna 3 kesempatan untuk login. Program meminta username dan password yang disembunyikan menggunakan pwinput yang kemudian dicocokan dengan data di users.json. jika cocok, program menampilkan pesan selamat datang dan mengarahkan sesuai roleh: admin ke admin() dan user ke menu_user(). Jika salah, kesempatan berkurang satu dan tersisa akan ditampilkan sampai habis.<br>
 
 ## 5. Function Registrasi <br>
 
 <img width="1036" height="1226" alt="image" src="https://github.com/user-attachments/assets/579b5fe0-0157-412c-a434-acd80c005133" />
-<img width="700" height="480" alt="image" src="https://github.com/user-attachments/assets/da8d67c4-0436-4f29-88fa-81cc6b542cda" />
+<img width="700" height="480" alt="image" src="https://github.com/user-attachments/assets/da8d67c4-0436-4f29-88fa-81cc6b542cda" /><br>
 Fungsi ini membuat akun pelanggan baru. program memvalidasi bahwa username tidak kosong dan belum dipakai, password 4-8 karakter, serta nomor telepon berupa angka 10-13 digit. Jika semua valid, data baru ditambahkan dengan role user dan saldo awal 0, lalu disimpan ke users.json dengan save_users.
 
 ## 6. Function Menu User <br>
@@ -128,9 +128,8 @@ Fungsi ini adalah menu utama setelah akun dengan role pelanggan berhasil login. 
 Fungsi tampilan_katalog dan katalog_layanan adalah untuk menampilkan daftar layanan dalam bentuk tabel PrettyTable dengan kolom ID, Nama, Kategori, Harga (berformat Rp), dan estimasi. Fungsi katalog membaca layanan.json, lalu memeanggil tampilan katalog jika data ada, atau menampilkan "Belum ada layanan" jika kosong. Fungsi tampilan_katalog dipisah karena juga dipakai ulang oleh order. 
 
 ## 8. Function Top Up Saldo<br>
-<img width="1112" height="1064" alt="image" src="https://github.com/user-attachments/assets/ff71fe9e-30da-4883-ad7c-531d71d5d3e0" /><br>
-<br<img width="1292" height="410" alt="image" src="https://github.com/user-attachments/assets/f5d8eeef-d6c7-45ec-be53-7febeb442771" /><br>
-Fungsi ini menambah saldo pelanggan lewat paket top-up. program menampilkan daftar paket dari topup.json<br> 
+<img width="1112" height="1064" alt="image" src="https://github.com/user-attachments/assets/ff71fe9e-30da-4883-ad7c-531d71d5d3e0" /><br><img width="1292" height="410" alt="image" src="https://github.com/user-attachments/assets/f5d8eeef-d6c7-45ec-be53-7febeb442771" /><br>
+Fungsi ini menambah saldo pelanggan lewat paket top-up. program menampilkan daftar paket dari topup.json beserta saldo saat ini, lalu meminta kode paket. Jika kode ditemukan, saldo user ditambah sesuai nominal paket dan disimpan ke users.json. Setelah itu, riwayat top-up dicatat ke datatopup.json dan saldo terbaru ditampilkan.<br> 
 
 ## 9. Function Order Laundry<br>
 <img width="2362" height="1324" alt="image" src="https://github.com/user-attachments/assets/46c007fc-ae59-407f-b851-4948e7dbfc6a" /><br>
@@ -185,7 +184,52 @@ Fungsi tambah_pelanggan() menampilkan header "TAMBAH PELANGGAN", membaca data da
 
 ## 20. Fungsi edit pelanggan<br>
 <img width="1077" height="846" alt="edit pelanggan" src="https://github.com/user-attachments/assets/6433d9b0-ac2e-419e-98a3-ef575f8e3960" /><br>
-ungsi edit_pelanggan() menampilkan header "EDIT PELANGGAN", membaca data dari file JSON pengguna, dan menangani error dengan menampilkan pesan jika file tidak ditemukan. Program kemudian meminta admin memasukkan username yang ingin diubah, mencari data pelanggan yang sesuai menggunakan fungsi next(), serta menampilkan pesan kesalahan jika username tidak ditemukan. Jika data ditemukan, program mencetak detail data lama—dengan menyembunyikan password menjadi bintang-bintang (*****) lalu meminta input nomor telepon baru di mana jika dikosongkan (menekan Enter), nomor telepon lama akan tetap dipertahankan. Terakhir, program menyimpan perubahan tersebut kembali ke file JSON menggunakan json.dump(), menampilkan pesan keberhasilan, dan menjeda eksekusi selama 2 detik
+ungsi edit_pelanggan() menampilkan header "EDIT PELANGGAN", membaca data dari file JSON pengguna, dan menangani error dengan menampilkan pesan jika file tidak ditemukan. Program kemudian meminta admin memasukkan username yang ingin diubah, mencari data pelanggan yang sesuai menggunakan fungsi next(), serta menampilkan pesan kesalahan jika username tidak ditemukan. Jika data ditemukan, program mencetak detail data lama—dengan menyembunyikan password menjadi bintang-bintang (*****) lalu meminta input nomor telepon baru di mana jika dikosongkan (menekan Enter), nomor telepon lama akan tetap dipertahankan. Terakhir, program menyimpan perubahan tersebut kembali ke file JSON menggunakan json.dump(), menampilkan pesan keberhasilan, dan menjeda eksekusi selama 2 detik<br>
+
+# Output dan Alur Penggunaannya
+##  1. Menu Utama<br>
+Tampilan awal program dengan tiga pilihan yaitu login, registrasi, dan keluar. Pengguna memiliki salah satunya dengan mengetik angka 1 sampai 3.<br>
+<img width="468" height="201" alt="image" src="https://github.com/user-attachments/assets/ab8e3edf-57b0-4033-9866-60839ce81412" /><br>
+
+##  2. Login<br>
+Pengguna memasukkan username dan password. Password tampil sebagai tanda `*` agar tidak terlihat. Jika cocok, muncul pesan “Login berhasil! Selamat datang, (user)” dan program akan langsung membuka menu user.<br>
+<img width="468" height="353" alt="image" src="https://github.com/user-attachments/assets/d7e7b3cd-612b-4c1b-90c0-b7b0854d6a03" />
+<br>
+
+## 3. Menu User<br>
+Menu untuk pelanggan setelah login akan ditampilkan. Pada bagian atas menampilkan nama pengguna dan saldo terbaru. Pilihan untuk menu user mencakup Katalog Layanan, Top Up Saldo, Order Laundry, Riwayat Transaksi, dan Logout.<br>
+￼<img width="468" height="218" alt="image" src="https://github.com/user-attachments/assets/29814482-cd36-45b9-9096-9edaa0d8ec14" />
+
+<br>
+
+## 4. Menu User - Katalog Layanan<br>
+Setelah memilih menu 1, daftar layanan ditampilkan dalam tabel berisi ID, nama, kategori, harga, dan estimasi pengerjaan. Tekan enter untuk kembali ke Menu User.<br>
+<img width="468" height="374" alt="image" src="https://github.com/user-attachments/assets/8ebcc1db-f92a-4f83-9944-88b181dc568c" /><br>
+
+##  5. Menu User - Top Up Saldo<br>
+Setelah memilih menu 2, program menampilkan paket top-up dengan kode yang dimulai dari L001-L003) beeserta saldo yang ada saat ini. Pelanggan memasukkan kode paket, lalu saldo bertambah sesuai nominalnya.<br>
+<img width="468" height="336" alt="image" src="https://github.com/user-attachments/assets/2dabb23a-e3fc-4d86-b86e-2cc8a6da8a6b" /><br>
+
+## 6.  Menu User - Order Laundry dan Invoice<br>
+Setelh user memilih menu 3. Pelanggan memilih ID layanan (L001) dan memasukkan berat 3kg. Programmenghitung total biaya dan menampilkan sisa saldo lalu meminta konfirmasi pembayaran. Setelah dikonfirmasi, saldo terpotong otomatis dan invoice dicetak berisi ID transaksi, tanggal, layanan, jumlah, dan total harga.<br>
+￼<img width="468" height="642" alt="image" src="https://github.com/user-attachments/assets/dd9f3e94-b533-4e7c-9741-39d67d7af2a8" /><br>
+
+## 7. Menu user - Riwayat Transaksi<br>
+Di dalam menu 4, program menampilkan semua transaksi milik pelanggan yang sedang login, lengkap dengan ID, tanggal, layanan, jumlah, status, dan total harga. Di bagian bawah ada total keseluruhan pengeluaran.<br>
+<img width="468" height="584" alt="image" src="https://github.com/user-attachments/assets/f4ee57ef-6692-42d1-a0d7-a9bd26528747" /><br>
+
+## 8. Menu User - Logout <br>
+Memilih menu 5 di menu user akan mengakhir sesi pelanggan. Saldo terakhir sudah sesuai dengan semua transaksi dan akhirnya kembali ke menu utama.<br>
+<img width="468" height="367" alt="image" src="https://github.com/user-attachments/assets/972bbc32-57a9-4d37-93f1-383647988376" /><br>
+
+
+## 9. Menu User - Registrasi<br>
+Muncul setelah memilih menu 2 di menu utama. pengguna mengisi username baru, password (4-8 karakter) dan nomor telepon (10-13 digit angka). Jika semua valid, muncul pesan akun berhasil ditambahkan!” dan program kembali ke Menu utama<br>
+<img width="468" height="420" alt="image" src="https://github.com/user-attachments/assets/672c266d-833f-4a73-a8bc-b50478426a10" /><br>
+
+                                                                                                                                                                                                                                          
+￼
+
 
 
 
