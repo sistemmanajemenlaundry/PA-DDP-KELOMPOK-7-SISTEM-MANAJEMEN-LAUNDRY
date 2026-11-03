@@ -146,6 +146,29 @@ Fungsi ini menampilkan struk setelah pelanggan berhasil melakukan order. Fungsi 
 <img width="1206" height="1110" alt="image" src="https://github.com/user-attachments/assets/ba3b6e13-e145-4abf-8eff-536399a0a33b" /><br>
 Fungsi ini Menampilkan semua transaksi milik pelanggan yang sedang login. program embaca file transksi.json dan menyaring hanya transaksi dengan username yang sama. Jika kosong, munvul "belum ada transaksi". Tetapi jika ada program akan mencetak struk dari setiap transaksi dan total pengeluaran.<br> 
 
+## 11. Menu Admin<br>
+<img width="712" height="567" alt="menu admin" src="https://github.com/user-attachments/assets/517eddd5-6556-431f-8a22-a03a34f77452" /><br>
+Program menu admin dapat dijalankan ketika pengguna berhasil login sebagai admin. Program menampilkan daftar menu yang terdiri dari Manajemen layanan, Manajemen pelanggan, Manajaemen Top Up, Laporan keuangan, dan Kembali. Admin diminta memilih opsi dari 1 hingga 5 dalam perulangan while True, sehingga menu akan terus tampil hingga admin memilih untuk kembali. Setiap angka memiliki fungsi masing-masing: pilihan 1 membuka Manajemen Layanan, pilihan 2 Manajemen Pelanggan, pilihan 3 Manajemen Top Up, pilihan 4 Laporan keuangan, dan pilihan 5 mengembalikan admin ke menu utama melalui fungsi menu_utama(). Jika admin memasukkan pilihan di luar rentang tersebut, program menampilkan pesan kesalahan dan meminta input ulang.<br>
+
+## 12. Manajemen Layanan<br>
+<img width="731" height="717" alt="Manajemen layanan" src="https://github.com/user-attachments/assets/6f79fadc-0120-431f-b0a3-46ea90a20021" /><br>
+Program ini dapat dijalankan jika pengguna memilih opsi 1. Fungsi manajemen_layanan() menampilkan menu utama pengelolaan layanan yang berisi pilihan untuk melihat, menambah, mengedit, menghapus, dan kembali ke menu admin. Semua data produk disimpan dalam file layanan.json yang digunakan oleh setiap fungsi terkait. Setelah menampilkan menu, program meminta admin memilih opsi dari 1 hingga 5. Pilihan 1 menampilkan daftar layanan melalui fungsi lihat_daftar(), pilihan 2 menambahkan layanan baru dengan tambah_layanan(), pilihan 3 mengedit data layanan melalui edit_layanan(), dan pilihan 4 menghapus layanan menggunakan hapus_layanan(). Jika admin memilih opsi 5, program akan memanggil fungsi admin() untuk kembali ke menu sebelumnya dan menghentikan perulangan.Jika admin memasukkan angka selain 1 sampai 5, program akan menampilkan pesan “Pilihan tidak valid, Silakan coba lagi”, dan meminta admin untuk memasukkan pilihan ulang yang benar.<br>
+
+## 13. Fungsi lihat_daftar<br>
+<img width="727" height="597" alt="Lihat daftar layanan" src="https://github.com/user-attachments/assets/c12fa4f4-26ae-40a9-9fc2-0c5eb68c80a3" /><br>
+Fungsi lihat_daftar() menggunakan blok try-except untuk membaca data dari file JSON yang diberikan ke dalam list kosong jika terjadi kesalahan, lalu memeriksa ketersediaan data untuk menampilkan pesan "Layanan Belum Tersedia" jika kosong atau menyusun serta mencetak data tersebut ke dalam bentuk tabel berformat PrettyTable dengan kolom id, nama, harga, estimasi, dan kategori sebelum meminta input untuk melanjutkan.<br>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
